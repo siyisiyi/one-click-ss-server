@@ -5,8 +5,8 @@ export PATH
 clear
 echo
 echo "#############################################################"
-echo "# One click Install Shadowsocks + ServerSpeeder 			  #"
-echo "# Author: C Wang <wang@siyi.me> 		                      #"
+echo "# One click Install Shadowsocks + ServerSpeeder 		  #"
+echo "# Author: C Wang <wang@siyi.me> 		                  #"
 echo "# Thanks: @zd423 <http://zdfans.com> @glzhaojin <zhaoj.in>  #"
 echo "#############################################################"
 echo
@@ -284,7 +284,9 @@ chattr +i /serverspeeder/etc/apx*
 # fi
 #安装完显示状态
 bash /serverspeeder/bin/serverSpeeder.sh status
-
+echo "=================================="
+echo "锐速安装完成，开始安装Shadowsocks"
+echo "=================================="
 # CentOS_Install()
 # {
 yum -y install python-setuptools && easy_install pip
@@ -399,7 +401,7 @@ MULTI_THREAD ="0"
 sed -i "s/MULTI_THREAD = 0/MULTI_THREAD = '${MULTI_THREAD}'/g" /root/shadowsocks/userapiconfig.py
 
 echo "#############################################################"
-echo "Config:"
+echo "Shadowsocks配置完成:"
 cat ./userapiconfig.py
 echo "#############################################################"
 

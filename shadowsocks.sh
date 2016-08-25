@@ -285,8 +285,8 @@ chattr +i /serverspeeder/etc/apx*
 #安装完显示状态
 bash /serverspeeder/bin/serverSpeeder.sh status
 
-CentOS_Install()
-{
+# CentOS_Install()
+# {
 yum -y install python-setuptools && easy_install pip
 yum -y install git
 yum -y groupinstall "Development Tools"
@@ -416,4 +416,4 @@ echo "#############################################################"
 echo
 echo "恭喜您!Shadowsocks Python多用户版安装并与前段SS-Panel对接完成!"
 echo "此脚本仅支持v3魔改版! 其他版本勿用!"
-}
+# }
